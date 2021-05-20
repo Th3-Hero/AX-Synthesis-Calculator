@@ -1,4 +1,4 @@
-const collection = {
+const collection = { // stores calculation before converted to string
     "Sulfur": 0,
     "Carbon": 0,
     "Nickel": 0,

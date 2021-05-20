@@ -1,44 +1,44 @@
-let matsList = '';
-let elementAmount = {};
+let matsList = ''; // final matList output
+let elementAmount = {}; // user input storeage
 
-function copyMatsList() { // function to copy mats list to clipboard
+function copyMatsList() { // copies matsList to clipboard
     collectAmount();
     calculateTotalMats();
     toList();
-    let copyList = document.createElement("textarea");
-    document.body.appendChild(copyList);
+    let copyList = document.createElement("textarea"); // creates textarea element
+    document.body.appendChild(copyList); // attaches textarea element to HTML body
     copyList.value = matsList;
     copyList.select();
-    document.execCommand("copy");
-    document.body.removeChild(copyList);
+    document.execCommand("copy"); // copies to clipboard
+    document.body.removeChild(copyList); // removes textarea from HTML body
     reset();
 }
 
-function toList() {
-    for (let key of Object.keys(collection)) {
-        if (collection[key] === 0) {
+function toList() { // converts collection Object to string matsList
+    for (let key of Object.keys(collection)) { // key = each integer in collection Object
+        if (collection[key] === 0) { // if key is 0 contiune (skips to next key)
             continue;
         }
-        matsList += `${collection[key]}x ${key} \n`;
+        matsList += `${collection[key]}x ${key} \n`; // sets matsList formating
     }
 }
 
-function calculateTotalMats() {
-    for (let value of Object.keys(crafting)) {
-        for (let info of crafting[value]) {
-            collection[info.material] += info.quantity * elementAmount[value];
+function calculateTotalMats() { // multiplies each key quantity against user input
+    for (let key of Object.keys(crafting)) { // key = key of crafting Object
+        for (let value of crafting[key]) { // value = value associated with key from crafting Object
+            collection[value.material] += value.quantity * elementAmount[key]; // multiplies each quantity against elementAmount
         }
     }
 }
 
-function collectAmount() {
-    for (let inputID of Object.keys(crafting)) {
-        elementAmount[inputID] = document.getElementById(inputID).value;
+function collectAmount() { // stores user input as Object
+    for (let inputID of Object.keys(crafting)) { // inputID = each key added to elementAmount Object
+        elementAmount[inputID] = document.getElementById(inputID).value; // adds each input to elementAmount Object
     }
 }
 
-function reset() {
-    for (let key of Object.keys(collection)) {
-        collection[key] = 0;
+function reset() { // resets all keys in collection to 0
+    for (let key of Object.keys(collection)) { // key = each integer in collection Object
+        collection[key] = 0; // sets integer to 0
     }
 }

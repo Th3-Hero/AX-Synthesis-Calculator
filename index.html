@@ -3,14 +3,14 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>Anti-Xeno Synthisis Caculator</title>
+        <title>Anti-Xeno Synthisis Calculator</title>
         <link rel="stylesheet" href="css/main.css">
     </head>
 
     <body>
 
-        <form class="box" action="index.html" method="post">
-        <h1>Anti-Xeno Synthisis Caculator</h1> 
+        <maintext class="box" action="index.html" method="post">
+        <h1>Anti-Xeno Synthisis Calculator</h1> 
 
         <input type="text" id="heatsink" placeholder="0">
         <label>Heatsinks</label> <br>
@@ -35,7 +35,14 @@
             <button class="button" onclick="copyMatsList(matsList)">Copy Mats List</button>
         </div>
 
-        </form>
+        </maintext>
+
+        <matsDisplay class="box-2">
+            <div class="text-wrap">
+            <larger class="bigger">Material List: <br> </larger>
+                <div id="textbox" class="textbox"></div>
+            </div>
+        </matsDisplay>
 
         <script src="js/main.js"></script>
         <script src="js/data.js"></script>

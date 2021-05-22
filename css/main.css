@@ -10,6 +10,10 @@ label {
     margin-left: 5px;
 }
 
+.bigger {
+    font-size: 26px;
+}
+
 .box {
     width: 300px;
     height: 560px;
@@ -17,9 +21,27 @@ label {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-100%,-50%);
     background: #34495e;
     text-align: left;
+}
+
+.box-2 {
+    width: 300px;
+    height: 560px;
+    padding: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%,-50%);
+    background: #34495e;
+}
+
+.text-wrap {
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 20px;
 }
 
 .box h1 {

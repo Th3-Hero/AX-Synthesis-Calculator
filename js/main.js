@@ -1,4 +1,5 @@
 let matsList = ''; // final matList output
+let displayList = ''; // final list for HTML display
 let elementAmount = {}; // user input storeage
 
 function copyMatsList() { // copies matsList to clipboard
@@ -11,15 +12,17 @@ function copyMatsList() { // copies matsList to clipboard
     copyList.select();
     document.execCommand("copy"); // copies to clipboard
     document.body.removeChild(copyList); // removes textarea from HTML body
+    document.getElementById("textbox").innerHTML = displayList;
     reset();
 }
 
 function toList() { // converts collection Object to string matsList
-    for (let key of Object.keys(collection)) { // key = each integer in collection Object
-        if (collection[key] === 0) { // if key is 0 contiune (skips to next key)
+    for (let key of Object.keys(collection)) { // key = each key in collection Object
+        if (collection[key] === 0) { // if value of each key is 0 contiune (skips to next key)
             continue;
         }
-        matsList += `${collection[key]}x ${key} \n`; // sets matsList formating
+        matsList += `${collection[key]}x ${key} \n`; // sets matsList formating for copy
+        displayList += `${collection[key]}x ${key} <br>`;
     }
 }
 
@@ -38,7 +41,9 @@ function collectAmount() { // stores user input as Object
 }
 
 function reset() { // resets all keys in collection to 0
-    for (let key of Object.keys(collection)) { // key = each integer in collection Object
+    for (let key of Object.keys(collection)) { // key = each key in collection Object
         collection[key] = 0; // sets integer to 0
+        matsList = ''; // resets matsList
+        displayList = ''; // resets HTML display
     }
 }

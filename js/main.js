@@ -1,26 +1,19 @@
-let collection = {};
-
 function copyMatsList() { // copies matsList to clipboard
     let elementAmount = collectAmount();
-    calculateTotalMats(elementAmount);
-    let matsList = toList();
+    let collection = calculateTotalMats(elementAmount);
+    let matsList = toList(collection);
     let copyList = document.createElement("textarea"); // creates textarea element
     document.body.appendChild(copyList); // attaches textarea element to HTML body
     copyList.value = matsList;
     copyList.select();
     document.execCommand("copy"); // copies to clipboard
     document.body.removeChild(copyList); // removes textarea from HTML body
-    // document.getElementById("textbox").innerHTML = displayList;
-    reset();
 }
 
-function toList() { // converts collection Object to string matsList
+function toList(collection) { // converts collection Object to string matsList
     let matsList = '';
     let displayList = '';
     for (let key of Object.keys(collection)) { // key = each key in collection Object
-        // if (collection[key] === 0) { if value of each key is 0 contiune (skips to next key)
-        //     continue;
-        // }
         matsList += `${collection[key]}x ${key} \n`; // sets matsList formating for copy
         displayList += `${collection[key]}x ${key} <br>`;
     }
@@ -29,20 +22,20 @@ function toList() { // converts collection Object to string matsList
 }
 
 function calculateTotalMats(elementAmount) { // multiplies each key quantity against user input
-    // let collection = {};
+    let collection = {};
     for (let key of Object.keys(crafting)) { // key = key of crafting Object
         for (let value of crafting[key]) { // value = value associated with key from crafting Object
-            if (elementAmount[key] === 0) {
+            let userInput = elementAmount[key];
+            if (userInput <= 0) {
                 continue;
             }
-            else if (elementAmount[key] > 0) {
-                if (collection.hasOwnProperty(elementAmount[key]) === false) {
-                    collection[value.material] = 0;
-                }
-                collection[value.material] += value.quantity * elementAmount[key]; // multiplies each quantity against elementAmount
+            if (!collection.hasOwnProperty(userInput)) {
+                collection[value.material] = 0;
             }
+            collection[value.material] += value.quantity * userInput; // multiplies each quantity against elementAmount
         }
     }
+    return collection;
 }
 
 function collectAmount() { // stores user input as Object
@@ -51,10 +44,4 @@ function collectAmount() { // stores user input as Object
         elementAmount[inputID] = document.getElementById(inputID).value; // adds each input to elementAmount Object
     }
     return elementAmount;
-}
-
-function reset(matsList) { // resets all keys in collection to 0
-    for (let key of Object.keys(collection)) { // key = each key in collection Object
-        // collection[key] = 0; sets integer to 0
-    }
 }

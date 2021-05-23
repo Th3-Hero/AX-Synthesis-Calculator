@@ -1,23 +1,3 @@
-// const collection = { stores calculation before converted to string
-//     "Sulphur": 0,
-//     "Carbon": 0,
-//     "Nickel": 0,
-//     "Iron": 0,
-//     "Zinc": 0,
-//     "Chromium": 0,
-//     "Manganese": 0,
-//     "Vanadium": 0,
-//     "Focus Crystals": 0,
-//     "Crystal Shards": 0,
-//     "Basic Conductors": 0,
-//     "Heat Conduction Wiring": 0,
-//     "Filament Composites": 0,
-//     "Guardian Power Conduit": 0,
-//     "Guardian Wreckage Components": 0,
-//     "Guardian Technology Components": 0,
-//     "Guardian Power Cell": 0
-// };
-
 const crafting = {
     heatsink: [{
         quantity: 2,

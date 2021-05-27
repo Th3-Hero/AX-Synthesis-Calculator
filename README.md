@@ -1,11 +1,15 @@
-# AX-Synthesis-Calculator
-Elite Dangerous Anti-Xeno Synthesis Calculator
-
+# Elite Dangerous Anti-Xeno Synthesis Calculator
 This calculator is designed to return a engineering material list for synthesising
 
 # Usage
-1. Run the `index.html`
+Run the `index.html`
+## Calculator
+1. Input the amount of each item you would like to synth
+2. Click the "**Start**" button
+3. List is automatically copied to clipboard
 
-2. Input the amount of each synth you would like to have
-
-3. Copy Mats List and paste elsewhere
+## Recipes Viewer
+1. Select recipe you wish to view from drop down meny
+2. Click the "**Go**" button
+3. Materials needed to synth selected item will be displayed
+4. 

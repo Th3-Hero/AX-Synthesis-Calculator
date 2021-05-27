@@ -5,14 +5,12 @@ body {
     background: #2d3436;
 }
 
+/* ------------------------------- */
+/* MULTI USE PARAMETERS START */
+/* ------------------------------- */
 /* sapces label front input fields */
 label {
     margin-left: 5px;
-}
-
-/* larger font for headers */
-.bigger {
-    font-size: 26px;
 }
 
 /* Header wrapers */
@@ -20,7 +18,7 @@ label {
     text-align: left;
     margin-top: 20px;
     margin-left: 20px;
-    font-size: 20px;
+    font-size: 26px;
 }
 
 /* textbox wrapers */
@@ -39,6 +37,13 @@ label {
     margin-bottom: 5px;
     text-align: center;
 }
+
+.button:hover, .go-button:hover {
+    background: #27ae60;
+}
+/* ------------------------------- */
+/* MULTI USE PARAMETERS END */
+/* ------------------------------- */
 
 /* grid containing entire page */
 #grid-container {
@@ -81,7 +86,7 @@ label {
     outline: none;
     color: white;
     font-size: 14px;
-    /* font-weight: bold; */
+    font-weight: bold;
     border-radius: 24px;
 }
 
@@ -111,31 +116,12 @@ label {
     cursor: pointer; 
 }
 
-.go-button:hover {
-    background: #27ae60;
-}
-
+/* main center box */
 .box {
     width: 300px;
     height: 560px;
-    padding: 0px;
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-100%,-50%); */
     background: #34495e;
     text-align: left;
-}
-
-.box-2 {
-    width: 300px;
-    height: 560px;
-    padding: 0px;
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(0%,-50%); */
-    background: #34495e;
 }
 
 .box input[type = "text"] {
@@ -157,11 +143,6 @@ label {
     border-color: #27ae60;
 }
 
-
-.button-wrapper {
-    text-align: center;
-}
-
 .button {
     width: 150px;
     background: none;
@@ -177,6 +158,13 @@ label {
     cursor: pointer; 
 }
 
-.button:hover {
-    background: #27ae60;
+.button-wrapper {
+    text-align: center;
+}
+
+/* right material box */
+.box-2 {
+    width: 300px;
+    height: 560px;
+    background: #34495e;
 }

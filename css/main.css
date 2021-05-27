@@ -1,27 +1,128 @@
-body{
-    margin: 0;
-    padding: 0;
+/* applies to all in HTML body */
+body {
     font-family: sans-serif;
     color: white;
     background: #2d3436;
 }
 
+/* sapces label front input fields */
 label {
     margin-left: 5px;
 }
 
+/* larger font for headers */
 .bigger {
     font-size: 26px;
+}
+
+/* Header wrapers */
+.text-wrap {
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+/* textbox wrapers */
+.text-wrap2 {
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+/* main header */
+.box h1 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* grid containing entire page */
+#grid-container {
+    display: grid;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #34495e;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 560px;
+    gap: 0px;
+    grid-template-areas: 
+        "recipes main list";
+}
+
+#grid > recipes {
+    grid-area: recipes;
+}
+
+#grid > main {
+    grid-area: main;
+}
+
+#grid > list {
+    grid-area: list;
+}
+
+/* dropdown selection, NOT the dropdown itself */
+.dropdown-select {
+    width: 210px;
+    background: none;
+    margin: 5px auto;
+    margin-top: 15px;
+    margin-left: 20px;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 7px;
+    outline: none;
+    color: white;
+    font-size: 14px;
+    /* font-weight: bold; */
+    border-radius: 24px;
+}
+
+.dropdown-select:hover {
+    cursor: pointer;
+    border-color: #27ae60 
+}
+
+/* dropdown itself, <select> accepts very few css parameters */
+.dropdown-select option {
+    background-color: #2d3436;
+    color: white;
+}
+
+/* runs selectOption to create string for display */
+.go-button {
+    width: 55px;
+    background: none;
+    margin-left: 5px;
+    text-align: center;
+    border: 3px solid #27ae60;
+    padding: 7px 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 24px;
+    cursor: pointer; 
+}
+
+.go-button:hover {
+    background: #27ae60;
 }
 
 .box {
     width: 300px;
     height: 560px;
     padding: 0px;
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-100%,-50%);
+    transform: translate(-100%,-50%); */
     background: #34495e;
     text-align: left;
 }
@@ -30,26 +131,11 @@ label {
     width: 300px;
     height: 560px;
     padding: 0px;
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(0%,-50%);
+    transform: translate(0%,-50%); */
     background: #34495e;
-}
-
-.text-wrap {
-    text-align: left;
-    margin-top: 20px;
-    margin-left: 20px;
-    font-size: 20px;
-}
-
-.box h1 {
-    color: white;
-    text-transform: uppercase;
-    font-weight: 500;
-    margin-bottom: 5px;
-    text-align: center;
 }
 
 .box input[type = "text"] {
@@ -75,6 +161,7 @@ label {
 .button-wrapper {
     text-align: center;
 }
+
 .button {
     width: 150px;
     background: none;

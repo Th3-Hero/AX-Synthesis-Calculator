@@ -5,7 +5,7 @@ This calculator is designed to return a engineering material list for synthesisi
 Run the `index.html`
 ## Calculator
 1. Input the amount of each item you would like to synth
-2. Click the "**Start**" button
+2. Click the "**Calculate**" button
 3. List is automatically copied to clipboard
 
 ## Recipes Viewer

@@ -6,9 +6,10 @@ body {
 }
 
 /* ------------------------------- */
-/* MULTI USE PARAMETERS START */
+/* MULTI USE PARAMETERS START      */
 /* ------------------------------- */
-/* sapces label front input fields */
+
+/* spaces label front input fields */
 label {
     margin-left: 5px;
 }
@@ -42,7 +43,7 @@ label {
     background: #27ae60;
 }
 /* ------------------------------- */
-/* MULTI USE PARAMETERS END */
+/* MULTI USE PARAMETERS END        */
 /* ------------------------------- */
 
 /* grid containing entire page */
@@ -54,7 +55,7 @@ label {
     left: 50%;
     transform: translate(-50%,-50%);
     background: #34495e;
-    grid-template-columns: 300px 300px 300px;
+    grid-template-columns: 315px 300px 300px;
     grid-template-rows: 560px;
     gap: 0px;
     grid-template-areas: 
@@ -75,11 +76,11 @@ label {
 
 /* dropdown selection, NOT the dropdown itself */
 .dropdown-select {
-    width: 210px;
+    width: 225px;
     background: none;
     margin: 5px auto;
     margin-top: 15px;
-    margin-left: 20px;
+    margin-left: 15px;
     text-align: center;
     border: 2px solid #3498db;
     padding: 7px;
@@ -103,16 +104,16 @@ label {
 
 /* runs selectOption to create string for display */
 .go-button {
-    width: 55px;
+    width: 60px;
     background: none;
-    margin-left: 5px;
+    margin-left: 3px;
     text-align: center;
     border: 3px solid #27ae60;
-    padding: 7px 5px;
+    padding: 6px;
     color: white;
     font-size: 16px;
     font-weight: bold;
-    border-radius: 24px;
+    border-radius: 20px;
     cursor: pointer; 
 }
 

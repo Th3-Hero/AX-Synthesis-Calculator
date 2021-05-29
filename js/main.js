@@ -1,13 +1,13 @@
 function selectOption() {
     let select = document.getElementById("dropdown-select");
-    let selected = select.value;
-    recipesViewer(selected);
-}
-
-function recipesViewer(selected) {
     let recipe = '';
-    for (let value of crafting[selected]) {
-        recipe += `${ value.quantity }x ${ value.material } <br>`;
+    if (select.value === 'none') {
+        recipe = '';
+    }
+    else {
+        for (let value of crafting[select.value]) {
+            recipe += `${ value.quantity }x ${ value.material } <br>`;
+        }
     }
     document.getElementById("recipebox").innerHTML = recipe;
 }
@@ -39,8 +39,8 @@ function calculateTotalMats(elementAmount) {
     let collection = {};
     for (let key of Object.keys(crafting)) { // key = key of crafting Object
         for (let value of crafting[key]) { // value = value associated with key from crafting Object
-            let userInput = elementAmount[key]; // userInput = each key in elementAmount
-            if (userInput <= 0) {
+            let userInput = elementAmount[key]; // userInput = each value associated with the key in elementAmount
+            if (isNaN(userInput) || userInput <= 0) {
                 continue;
             }
             if (!collection.hasOwnProperty(userInput)) {

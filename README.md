@@ -10,5 +10,5 @@ Run the `index.html`
 
 ## Recipes Viewer
 1. Select recipe you wish to view from drop down meny
-2. Click the "**Go**" button
+2. Click the "**View**" button
 3. Materials needed to synth selected item will be displayed

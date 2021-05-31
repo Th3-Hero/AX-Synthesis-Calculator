@@ -1,10 +1,7 @@
 function selectOption() {
     let select = document.getElementById("dropdown-select");
     let recipe = '';
-    if (select.value === 'none') {
-        recipe = '';
-    }
-    else {
+    if (select.value !== 'none') {
         for (let value of crafting[select.value]) {
             recipe += `${ value.quantity }x ${ value.material } <br>`;
         }

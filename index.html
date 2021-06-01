@@ -9,40 +9,71 @@
 
     <body>
 
-        <maintext class="box" action="index.html" method="post">
-        <h1>Anti-Xeno Synthisis Calculator</h1> 
+        <grid id="grid-container">
 
-        <input type="text" id="heatsink" placeholder="0">
-        <label>Heatsinks</label> <br>
-        <input type="text" id="flak" placeholder="0">
-        <label>Remote Release Flak</label> <br>
-        <input type="text" id="gauss" placeholder="0">
-        <label>Gauss Cannon</label> <br>
-        <input type="text" id="gaussPrem" placeholder="0">
-        <label>Gauss Cannon Prem Ammo</label> <br>
-        <input type="text" id="shard" placeholder="0">
-        <label>Shard Cannon</label> <br>
-        <input type="text" id="shardPrem" placeholder="0">
-        <label>Shard Cannon Prem Ammo</label> <br>
-        <input type="text" id="limpets" placeholder="0">
-        <label>Limpets</label> <br>
-        <input type="text" id="afmu" placeholder="0">
-        <label>AFMU Refills</label> <br>
-        <input type="text" id="lifeSupport" placeholder="0">
-        <label>Life Support</label> <br>
+            <recipes class="recipes-container">
+                    <div class="text-wrap">
+                        <div>Recipes Viewer:</div> 
+                    </div>
+                    <select id="dropdown-select" class="dropdown-select">
+                        <option value="none">None</option>
+                        <option value="heatsink">Heatsinks</option>
+                        <option value="flak">Remote Release Flak</option>
+                        <option value="gauss">Gauss Cannon</option>
+                        <option value="gaussPrem">Gauss Cannon Prem Ammo</option>
+                        <option value="shard">Shard Cannon</option>
+                        <option value="shardPrem">Shard Cannon Prem Ammo</option>
+                        <option value="limpets">Limpets</option>
+                        <option value="afmu">AFM Refill</option>
+                        <option value="lifeSupport">Life Support</option>
+                    </select>
+                    <button class="go-button" onclick="selectOption()">View</button>
+                    <div class="text-wrap2">
+                        <div id="recipebox" class="recipebox"></div>
+                    </div>
+            </recipes>
 
-        <div class="button-wrapper">
-            <button class="button" onclick="copyMatsList()">Copy Mats List</button>
-        </div>
+            <main class="main-container">
+                <maintext class="box">
+                    <h1>Anti-Xeno Synthisis Calculator</h1> 
 
-        </maintext>
+                    <input type="text" id="heatsink" placeholder="0">
+                    <label>Heatsinks</label> <br>
+                    <input type="text" id="flak" placeholder="0">
+                    <label>Remote Release Flak</label> <br>
+                    <input type="text" id="gauss" placeholder="0">
+                    <label>Gauss Cannon</label> <br>
+                    <input type="text" id="gaussPrem" placeholder="0">
+                    <label>Gauss Cannon Prem Ammo</label> <br>
+                    <input type="text" id="shard" placeholder="0">
+                    <label>Shard Cannon</label> <br>
+                    <input type="text" id="shardPrem" placeholder="0">
+                    <label>Shard Cannon Prem Ammo</label> <br>
+                    <input type="text" id="limpets" placeholder="0">
+                    <label>Limpets</label> <br>
+                    <input type="text" id="afmu" placeholder="0">
+                    <label>AFMU Refills</label> <br>
+                    <input type="text" id="lifeSupport" placeholder="0">
+                    <label>Life Support</label> <br>
 
-        <matsDisplay class="box-2">
-            <div class="text-wrap">
-            <larger class="bigger">Material List: <br> </larger>
-                <div id="textbox" class="textbox"></div>
-            </div>
-        </matsDisplay>
+                    <div class="button-wrapper">
+                        <button class="button" onclick="copyMatsList()">Calculate</button>
+                    </div>
+                </maintext>
+            </main> 
+
+            <list class="list-container">
+                <matsDisplay class="box-2">
+                    <div class="text-wrap">
+                        <div>Material List: <br> </div>
+                    </div>
+                    <div class="text-wrap2">
+                        <div id="textbox" class="textbox"></div>
+                    </div>
+                </matsDisplay>
+            </list>
+
+        </grid>
 
         <script src="js/main.js"></script>
         <script src="js/data.js"></script>

@@ -36,8 +36,8 @@ function calculateTotalMats(elementAmount) {
     let collection = {};
     for (let key of Object.keys(crafting)) { // key = key of crafting Object
         for (let value of crafting[key]) { // value = value associated with key from crafting Object
-            let userInput = elementAmount[key]; // userInput = each value associated with the key in elementAmount
-            if (isNaN(userInput) || userInput <= 0) {
+            let userInput = Number(elementAmount[key]); // userInput = each value associated with the key in elementAmount
+            if (!Number.isInteger(userInput) || userInput <= 0) {
                 continue;
             }
             if (!collection.hasOwnProperty(userInput)) {

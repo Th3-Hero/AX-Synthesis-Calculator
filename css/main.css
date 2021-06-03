@@ -213,3 +213,9 @@ label {
 .tool-tip:hover .tool-tip-text {
     visibility: visible;
 }
+
+a {
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+}

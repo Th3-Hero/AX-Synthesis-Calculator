@@ -2,7 +2,7 @@ function selectOption() {
     let select = document.getElementById("dropdown-select");
     let recipe = '';
     if (select.value !== 'none') {
-        for (let value of crafting[select.value]) {
+        for (let value of crafting[select.value].materials) {
             recipe += `${ value.quantity }x ${ value.material } <br>`;
         }
     }
@@ -35,7 +35,7 @@ function toList(collection) {
 function calculateTotalMats(elementAmount) {
     let collection = {};
     for (let key of Object.keys(crafting)) { // key = key of crafting Object
-        for (let value of crafting[key]) { // value = value associated with key from crafting Object
+        for (let value of crafting[key].materials) { // value = value associated with key from crafting Object
             let userInput = Number(elementAmount[key]); // userInput = each value associated with the key in elementAmount
             if (!Number.isInteger(userInput) || userInput <= 0) {
                 continue;

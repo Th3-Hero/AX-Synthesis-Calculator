@@ -24,7 +24,7 @@
                         <option value="shard">Shard Cannon</option>
                         <option value="shardPrem">Shard Cannon Prem Ammo</option>
                         <option value="limpets">Limpets</option>
-                        <option value="afmu">AFM Refill</option>
+                        <option value="afm">AFM Refill</option>
                         <option value="lifeSupport">Life Support</option>
                     </select>
                     <button class="go-button" onclick="selectOption()">View</button>
@@ -34,7 +34,7 @@
             </recipes>
 
             <main class="main-container">
-                <maintext class="box">
+                <main-text class="box">
                     <h1>Anti-Xeno Synthesis Calculator</h1> 
 
                     <input type="text" id="heatsink" placeholder="0">
@@ -51,26 +51,26 @@
                     <label>Shard Cannon Prem Ammo</label> <br>
                     <input type="text" id="limpets" placeholder="0">
                     <label>Limpets</label> <br>
-                    <input type="text" id="afmu" placeholder="0">
-                    <label>AFMU Refills</label> <br>
+                    <input type="text" id="afm" placeholder="0">
+                    <label>AFM Refill</label> <br>
                     <input type="text" id="lifeSupport" placeholder="0">
                     <label>Life Support</label> <br>
 
                     <div class="button-wrapper">
                         <button class="button" onclick="copyMatsList()">Calculate</button>
                     </div>
-                </maintext>
+                </main-text>
             </main> 
 
             <list class="list-container">
-                <matsDisplay class="box-2">
+                <mats-display class="box-2">
                     <div class="text-wrap">
                         <div>Material List: <br> </div>
                     </div>
                     <div class="text-wrap2">
                         <div id="textbox" class="textbox"></div>
                     </div>
-                </matsDisplay>
+                </mats-display>
             </list>
 
         </grid>

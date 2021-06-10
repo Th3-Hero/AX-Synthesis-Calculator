@@ -2,7 +2,7 @@
 body {
     font-family: sans-serif;
     color: white;
-    background: #2d3436;
+    background: #2d3436; 
 }
 
 /* ------------------------------- */
@@ -11,7 +11,7 @@ body {
 
 /* spaces label front input fields */
 label {
-    margin-left: 5px;
+    margin-left: -3px;
 }
 
 /* Header wrapers */
@@ -42,6 +42,19 @@ label {
 .button:hover, .go-button:hover {
     background: #27ae60;
 }
+
+button1 {
+    cursor: pointer;
+    display: inline-block;
+    transform: translate(10%, 17%);
+}
+
+button2 {
+    cursor: pointer;
+    display: inline-block;
+    transform: translate(-15%, 20%);
+}
+
 /* ------------------------------- */
 /* MULTI USE PARAMETERS END        */
 /* ------------------------------- */
@@ -55,7 +68,7 @@ label {
     left: 50%;
     transform: translate(-50%,-50%);
     background: #34495e;
-    grid-template-columns: 315px 300px 300px;
+    grid-template-columns: 315px 330px 300px;
     grid-template-rows: 560px;
     gap: 0px;
     grid-template-areas: 
@@ -93,7 +106,7 @@ label {
 
 .dropdown-select:hover {
     cursor: pointer;
-    border-color: #27ae60 
+    border-color: #27ae60; 
 }
 
 /* dropdown itself, <select> accepts very few css parameters */
@@ -126,10 +139,10 @@ label {
 }
 
 .box input[type = "text"] {
-    width: 50px;
+    width: 60px;
     background: none;
     margin: 5px auto;
-    margin-left: 20px;
+    margin-left: 3px;
     text-align: center;
     border: 2px solid #3498db;
     padding: 3px 0px;
@@ -168,4 +181,27 @@ label {
     width: 300px;
     height: 560px;
     background: #34495e;
+}
+
+.tooltip {
+    position: absolute;
+    margin-top: 17px;
+    margin-left: 10px;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 250px;
+    background-color: #2d3436;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 12px;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }

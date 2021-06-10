@@ -9,6 +9,15 @@ function selectOption() {
     document.getElementById("recipebox").innerHTML = recipe;
 }
 
+function clearInput(htmlElement) {
+    htmlElement.value = '';
+}
+
+function maxInput(htmlElement) {
+    let id = htmlElement.id;
+    htmlElement.value = crafting[id].max;
+}
+
 function copyMatsList() {
     let elementAmount = collectAmount();
     let collection = calculateTotalMats(elementAmount);
@@ -40,7 +49,7 @@ function calculateTotalMats(elementAmount) {
             if (!Number.isInteger(userInput) || userInput <= 0) {
                 continue;
             }
-            if (!collection.hasOwnProperty(userInput)) {
+            if (!collection.hasOwnProperty(value.material)) {
                 collection[value.material] = 0;
             }
             collection[value.material] += value.quantity * userInput; // multiplies each key quantity against user input

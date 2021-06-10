@@ -80,7 +80,7 @@ const crafting = {
         materials:
         [
             { quantity: 2, material: "Iron" },
-            { quantity: 1, material: "Nickel"}
+            { quantity: 1, material: "Nickel" }
         ]
     }
 };

@@ -1,6 +1,6 @@
 const crafting = {
     heatsink: {
-        max: 150, // max synths per item due to material capacity limit
+        max: 150,
         materials:
         [
             { quantity: 2, material: "Basic Conductors" },

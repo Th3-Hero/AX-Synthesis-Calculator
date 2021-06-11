@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <title>Anti-Xeno Synthesis Calculator</title>
         <link rel="stylesheet" href="css/main.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons%7CMaterial+Icons+Outlined" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons%7CMaterial+Icons" rel="stylesheet">
     </head>
 
     <body>
@@ -30,64 +30,64 @@
                     </select>
                     <button class="go-button" onclick="selectOption()">View</button>
                     <div class="text-wrap2">
-                        <div id="recipebox" class="recipebox"></div>
+                        <div id="recipe-box" class="recipe-box"></div>
                     </div>
             </recipes>
 
             <main class="main-container">
-                <main-text class="box">
+                <main-text class="main-text">
                     <h1>Anti-Xeno Synthesis Calculator</h1> 
 
-                    <button1 class="clear-input" onclick="clearInput(heatsink)"><span class="material-icons">block</span></button1>
+                    <button class="clear-input button-inputs button-inputs" onclick="clearInput(heatsink)"><span class="material-icons">block</span></button>
                     <input type="text" id="heatsink" placeholder="0-150">
-                    <button2 class="max-input" onclick="maxInput(heatsink)"><span class="material-icons-outlined">double_arrow</span></button2>
+                    <button class="max-input button-inputs" onclick="maxInput(heatsink)"><span class="material-icons md-24">double_arrow</span></button>
                     <label>Heatsinks</label> <br>
 
-                    <button1 class="clear-input" onclick="clearInput(flak)"><span class="material-icons">block</span></button1>
+                    <button class="clear-input button-inputs" onclick="clearInput(flak)"><span class="material-icons">block</span></button>
                     <input type="text" id="flak" placeholder="0-75">
-                    <button2 class="max-input" onclick="maxInput(flak)"><span class="material-icons-outlined">double_arrow</span></button2>
+                    <button class="max-input button-inputs" onclick="maxInput(flak)"><span class="material-icons md-24">double_arrow</span></button>
                     <label>Remote Release Flak</label> <br>
 
-                    <button1 class="clear-input" onclick="clearInput(gauss)"><span class="material-icons">block</span></button1>
+                    <button class="clear-input button-inputs" onclick="clearInput(gauss)"><span class="material-icons">block</span></button>
                     <input type="text" id="gauss" placeholder="0-75">
-                    <button2 class="max-input" onclick="maxInput(gauss)"><span class="material-icons-outlined">double_arrow</span></button2>
+                    <button class="max-input button-inputs" onclick="maxInput(gauss)"><span class="material-icons md-24">double_arrow</span></button>
                     <label>Gauss Cannon</label> <br>
 
-                    <button1 class="clear-input" onclick="clearInput(gaussPrem)"><span class="material-icons">block</span></button1>
+                    <button class="clear-input button-inputs" onclick="clearInput(gaussPrem)"><span class="material-icons">block</span></button>
                     <input type="text" id="gaussPrem" placeholder="0-20">
-                    <button2 class="max-input" onclick="maxInput(gaussPrem)"><span class="material-icons-outlined">double_arrow</span></button2>
+                    <button class="max-input button-inputs" onclick="maxInput(gaussPrem)"><span class="material-icons md-24">double_arrow</span></button>
                     <label>Gauss Cannon Prem Ammo</label> <br>
 
-                    <button1 class="clear-input" onclick="clearInput(shard)"><span class="material-icons">block</span></button1>
+                    <button class="clear-input button-inputs" onclick="clearInput(shard)"><span class="material-icons">block</span></button>
                     <input type="text" id="shard" placeholder="0-60">
-                    <button2 class="max-input" onclick="maxInput(shard)"><span class="material-icons-outlined">double_arrow</span></button2>
+                    <button class="max-input button-inputs" onclick="maxInput(shard)"><span class="material-icons md-24">double_arrow</span></button>
                     <label>Shard Cannon</label> <br>
 
-                    <button1 class="clear-input" onclick="clearInput(shardPrem)"><span class="material-icons">block</span></button1>
+                    <button class="clear-input button-inputs" onclick="clearInput(shardPrem)"><span class="material-icons">block</span></button>
                     <input type="text" id="shardPrem" placeholder="0-37">
-                    <button2 class="max-input" onclick="maxInput(shardPrem)"><span class="material-icons-outlined">double_arrow</span></button2>
+                    <button class="max-input button-inputs" onclick="maxInput(shardPrem)"><span class="material-icons md-24">double_arrow</span></button>
                     <label>Shard Cannon Prem Ammo</label> <br>
 
-                    <button1 class="clear-input" onclick="clearInput(limpets)"><span class="material-icons">block</span></button1>
+                    <button class="clear-input button-inputs" onclick="clearInput(limpets)"><span class="material-icons">block</span></button>
                     <input type="text" id="limpets" placeholder="0-30">
-                    <button2 class="max-input" onclick="maxInput(limpets)"><span class="material-icons-outlined">double_arrow</span></button2>
+                    <button class="max-input button-inputs" onclick="maxInput(limpets)"><span class="material-icons md-24">double_arrow</span></button>
                     <label>Limpets</label> <br>
 
-                    <button1 class="clear-input" onclick="clearInput(afm)"><span class="material-icons">block</span></button1>
+                    <button class="clear-input button-inputs" onclick="clearInput(afm)"><span class="material-icons">block</span></button>
                     <input type="text" id="afm" placeholder="0-83">
-                    <button2 class="max-input" onclick="maxInput(afm)"><span class="material-icons-outlined">double_arrow</span></button2>
+                    <button class="max-input button-inputs" onclick="maxInput(afm)"><span class="material-icons md-24">double_arrow</span></button>
                     <label>AFM Refill</label> <br>
                     
-                    <button1 class="clear-input" onclick="clearInput(lifeSupport)"><span class="material-icons">block</span></button1>
+                    <button class="clear-input button-inputs" onclick="clearInput(lifeSupport)"><span class="material-icons">block</span></button>
                     <input type="text" id="lifeSupport" placeholder="0-150">
-                    <button2 class="max-input" onclick="maxInput(lifeSupport)"><span class="material-icons-outlined">double_arrow</span></button2>
+                    <button class="max-input button-inputs" onclick="maxInput(lifeSupport)"><span class="material-icons md-24">double_arrow</span></button>
                     <label>Life Support</label> <br>
 
                     <div class="button-wrapper">
-                        <button class="button" onclick="copyMatsList()">Calculate</button>
-                        <label3 class="tooltip">
+                        <button class="clacButton" onclick="copyMatsList()">Calculate</button>
+                        <label3 class="tool-tip">
                             <span class="material-icons">info</span>
-                            <span class="tooltiptext">Keep in mind you can only hold so much of each item!</span>
+                            <span class="tool-tip-text">Keep in mind you can only hold so much of each item!</span>
                         </label3>
                     </div>
                 </main-text>
@@ -99,7 +99,7 @@
                         <div>Material List: <br> </div>
                     </div>
                     <div class="text-wrap2">
-                        <div id="textbox" class="textbox"></div>
+                        <div id="text-box"></div>
                     </div>
                 </mats-display>
 

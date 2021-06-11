@@ -2,7 +2,7 @@
 body {
     font-family: sans-serif;
     color: white;
-    background: #2d3436; 
+    background: #2d3436;
 }
 
 /* ------------------------------- */
@@ -31,7 +31,7 @@ label {
 }
 
 /* main header */
-.box h1 {
+.main-text h1 {
     color: white;
     text-transform: uppercase;
     font-weight: 500;
@@ -43,17 +43,27 @@ label {
     background: #27ae60;
 }
 
-button1 {
+.button-inputs {
+    background: none;
+    border: none;
+    color: white;
+    padding: 0px 0px;
     cursor: pointer;
-    display: inline-block;
-    transform: translate(10%, 17%);
+    display: inline-block; 
 }
 
-button2 {
-    cursor: pointer;
-    display: inline-block;
-    transform: translate(-15%, 20%);
+.clear-input {
+    transform: translate(10%, 22%);
 }
+
+.max-input {
+    transform: translate(-15%, 25%);
+}
+
+.material-icons.md-24 { 
+    font-size: 28px; 
+}
+
 
 /* ------------------------------- */
 /* MULTI USE PARAMETERS END        */
@@ -131,14 +141,14 @@ button2 {
 }
 
 /* main center box */
-.box {
+.main-text {
     width: 300px;
     height: 560px;
     background: #34495e;
     text-align: left;
 }
 
-.box input[type = "text"] {
+.main-text input[type = "text"] {
     width: 60px;
     background: none;
     margin: 5px auto;
@@ -153,15 +163,15 @@ button2 {
     border-radius: 15px;
 }
 
-.box input[type = "text"]:focus,.box input[type = "text"]:focus{
+.main-text input[type = "text"]:focus,.main-text input[type = "text"]:focus{
     border-color: #27ae60;
 }
 
-.button {
+.clacButton {
     width: 125px;
     background: none;
     margin: 5px auto;
-    margin-top: 10px;
+    margin-top: 2px;
     text-align: center;
     border: 3px solid #27ae60;
     padding: 7px 5px;
@@ -183,25 +193,26 @@ button2 {
     background: #34495e;
 }
 
-.tooltip {
+.tool-tip {
     position: absolute;
-    margin-top: 17px;
+    margin-top: 9px;
     margin-left: 10px;
 }
 
 /* Tooltip text */
-.tooltip .tooltiptext {
+.tool-tip .tool-tip-text {
     visibility: hidden;
     width: 250px;
     background-color: #2d3436;
     color: white;
     text-align: center;
-    padding: 5px 0;
+    padding: 5px 5px;
     border-radius: 12px;
     position: absolute;
     z-index: 1;
+    transform: translate(3%,-25%);
 }
 
-.tooltip:hover .tooltiptext {
+.tool-tip:hover .tool-tip-text {
     visibility: visible;
 }

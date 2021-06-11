@@ -11,7 +11,7 @@ body {
 
 /* spaces label front input fields */
 label {
-    margin-left: 5px;
+    margin-left: -3px;
 }
 
 /* Header wrapers */
@@ -31,7 +31,7 @@ label {
 }
 
 /* main header */
-.box h1 {
+.main-text h1 {
     color: white;
     text-transform: uppercase;
     font-weight: 500;
@@ -42,6 +42,29 @@ label {
 .button:hover, .go-button:hover {
     background: #27ae60;
 }
+
+.button-inputs {
+    background: none;
+    border: none;
+    color: white;
+    padding: 0px 0px;
+    cursor: pointer;
+    display: inline-block; 
+}
+
+.clear-input {
+    transform: translate(10%, 22%);
+}
+
+.max-input {
+    transform: translate(-15%, 25%);
+}
+
+.material-icons.md-24 { 
+    font-size: 28px; 
+}
+
+
 /* ------------------------------- */
 /* MULTI USE PARAMETERS END        */
 /* ------------------------------- */
@@ -55,7 +78,7 @@ label {
     left: 50%;
     transform: translate(-50%,-50%);
     background: #34495e;
-    grid-template-columns: 315px 300px 300px;
+    grid-template-columns: 315px 330px 300px;
     grid-template-rows: 560px;
     gap: 0px;
     grid-template-areas: 
@@ -93,7 +116,7 @@ label {
 
 .dropdown-select:hover {
     cursor: pointer;
-    border-color: #27ae60 
+    border-color: #27ae60; 
 }
 
 /* dropdown itself, <select> accepts very few css parameters */
@@ -118,18 +141,18 @@ label {
 }
 
 /* main center box */
-.box {
+.main-text {
     width: 300px;
     height: 560px;
     background: #34495e;
     text-align: left;
 }
 
-.box input[type = "text"] {
-    width: 50px;
+.main-text input[type = "text"] {
+    width: 60px;
     background: none;
     margin: 5px auto;
-    margin-left: 20px;
+    margin-left: 3px;
     text-align: center;
     border: 2px solid #3498db;
     padding: 3px 0px;
@@ -140,15 +163,15 @@ label {
     border-radius: 15px;
 }
 
-.box input[type = "text"]:focus,.box input[type = "text"]:focus{
+.main-text input[type = "text"]:focus,.main-text input[type = "text"]:focus{
     border-color: #27ae60;
 }
 
-.button {
+.calc-button {
     width: 125px;
     background: none;
     margin: 5px auto;
-    margin-top: 10px;
+    margin-top: 2px;
     text-align: center;
     border: 3px solid #27ae60;
     padding: 7px 5px;
@@ -168,4 +191,28 @@ label {
     width: 300px;
     height: 560px;
     background: #34495e;
+}
+
+.tool-tip {
+    position: absolute;
+    margin-top: 9px;
+    margin-left: 10px;
+}
+
+/* Tooltip text */
+.tool-tip .tool-tip-text {
+    visibility: hidden;
+    width: 250px;
+    background-color: #2d3436;
+    color: white;
+    text-align: center;
+    padding: 5px 5px;
+    border-radius: 12px;
+    position: absolute;
+    z-index: 1;
+    transform: translate(3%,-25%);
+}
+
+.tool-tip:hover .tool-tip-text {
+    visibility: visible;
 }

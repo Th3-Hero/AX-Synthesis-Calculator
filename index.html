@@ -3,8 +3,9 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>Anti-Xeno Synthisis Calculator</title>
+        <title>Anti-Xeno Synthesis Calculator</title>
         <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
 
     <body>
@@ -24,56 +25,88 @@
                         <option value="shard">Shard Cannon</option>
                         <option value="shardPrem">Shard Cannon Prem Ammo</option>
                         <option value="limpets">Limpets</option>
-                        <option value="afmu">AFM Refill</option>
+                        <option value="afm">AFM Refill</option>
                         <option value="lifeSupport">Life Support</option>
                     </select>
                     <button class="go-button" onclick="selectOption()">View</button>
                     <div class="text-wrap2">
-                        <div id="recipebox" class="recipebox"></div>
+                        <div id="recipe-box" class="recipe-box"></div>
                     </div>
             </recipes>
 
             <main class="main-container">
-                <maintext class="box">
+                <main-text class="main-text">
                     <h1>Anti-Xeno Synthesis Calculator</h1> 
 
-                    <input type="text" id="heatsink" placeholder="0">
+                    <button class="clear-input button-inputs button-inputs" onclick="clearInput(heatsink)"><span class="material-icons">block</span></button>
+                    <input type="text" id="heatsink" placeholder="0-150">
+                    <button class="max-input button-inputs" onclick="maxInput(heatsink)"><span class="material-icons md-24">double_arrow</span></button>
                     <label>Heatsinks</label> <br>
-                    <input type="text" id="flak" placeholder="0">
+
+                    <button class="clear-input button-inputs" onclick="clearInput(flak)"><span class="material-icons">block</span></button>
+                    <input type="text" id="flak" placeholder="0-75">
+                    <button class="max-input button-inputs" onclick="maxInput(flak)"><span class="material-icons md-24">double_arrow</span></button>
                     <label>Remote Release Flak</label> <br>
-                    <input type="text" id="gauss" placeholder="0">
+
+                    <button class="clear-input button-inputs" onclick="clearInput(gauss)"><span class="material-icons">block</span></button>
+                    <input type="text" id="gauss" placeholder="0-75">
+                    <button class="max-input button-inputs" onclick="maxInput(gauss)"><span class="material-icons md-24">double_arrow</span></button>
                     <label>Gauss Cannon</label> <br>
-                    <input type="text" id="gaussPrem" placeholder="0">
+
+                    <button class="clear-input button-inputs" onclick="clearInput(gaussPrem)"><span class="material-icons">block</span></button>
+                    <input type="text" id="gaussPrem" placeholder="0-20">
+                    <button class="max-input button-inputs" onclick="maxInput(gaussPrem)"><span class="material-icons md-24">double_arrow</span></button>
                     <label>Gauss Cannon Prem Ammo</label> <br>
-                    <input type="text" id="shard" placeholder="0">
+
+                    <button class="clear-input button-inputs" onclick="clearInput(shard)"><span class="material-icons">block</span></button>
+                    <input type="text" id="shard" placeholder="0-60">
+                    <button class="max-input button-inputs" onclick="maxInput(shard)"><span class="material-icons md-24">double_arrow</span></button>
                     <label>Shard Cannon</label> <br>
-                    <input type="text" id="shardPrem" placeholder="0">
+
+                    <button class="clear-input button-inputs" onclick="clearInput(shardPrem)"><span class="material-icons">block</span></button>
+                    <input type="text" id="shardPrem" placeholder="0-37">
+                    <button class="max-input button-inputs" onclick="maxInput(shardPrem)"><span class="material-icons md-24">double_arrow</span></button>
                     <label>Shard Cannon Prem Ammo</label> <br>
-                    <input type="text" id="limpets" placeholder="0">
+
+                    <button class="clear-input button-inputs" onclick="clearInput(limpets)"><span class="material-icons">block</span></button>
+                    <input type="text" id="limpets" placeholder="0-30">
+                    <button class="max-input button-inputs" onclick="maxInput(limpets)"><span class="material-icons md-24">double_arrow</span></button>
                     <label>Limpets</label> <br>
-                    <input type="text" id="afmu" placeholder="0">
-                    <label>AFMU Refills</label> <br>
-                    <input type="text" id="lifeSupport" placeholder="0">
+
+                    <button class="clear-input button-inputs" onclick="clearInput(afm)"><span class="material-icons">block</span></button>
+                    <input type="text" id="afm" placeholder="0-83">
+                    <button class="max-input button-inputs" onclick="maxInput(afm)"><span class="material-icons md-24">double_arrow</span></button>
+                    <label>AFM Refill</label> <br>
+                    
+                    <button class="clear-input button-inputs" onclick="clearInput(lifeSupport)"><span class="material-icons">block</span></button>
+                    <input type="text" id="lifeSupport" placeholder="0-150">
+                    <button class="max-input button-inputs" onclick="maxInput(lifeSupport)"><span class="material-icons md-24">double_arrow</span></button>
                     <label>Life Support</label> <br>
 
                     <div class="button-wrapper">
-                        <button class="button" onclick="copyMatsList()">Calculate</button>
+                        <button class="calc-button" onclick="copyMatsList()">Calculate</button>
+                        <label3 class="tool-tip">
+                            <span class="material-icons">info</span>
+                            <span class="tool-tip-text">Keep in mind you can only hold so much of each item!</span>
+                        </label3>
                     </div>
-                </maintext>
-            </main> 
+                </main-text>
+            </main>
 
             <list class="list-container">
-                <matsDisplay class="box-2">
+                <mats-display class="box-2">
                     <div class="text-wrap">
                         <div>Material List: <br> </div>
                     </div>
                     <div class="text-wrap2">
-                        <div id="textbox" class="textbox"></div>
+                        <div id="text-box"></div>
                     </div>
-                </matsDisplay>
+                </mats-display>
+
             </list>
 
         </grid>
+
 
         <script src="js/main.js"></script>
         <script src="js/data.js"></script>

@@ -2,11 +2,20 @@ function selectOption() {
     let select = document.getElementById("dropdown-select");
     let recipe = '';
     if (select.value !== 'none') {
-        for (let value of crafting[select.value]) {
-            recipe += `${ value.quantity }x ${ value.material } <br>`;
+        for (let matObj of crafting[select.value].materials) {
+            recipe += `${ matObj.quantity }x ${ matObj.material } <br>`;
         }
     }
-    document.getElementById("recipebox").innerHTML = recipe;
+    document.getElementById("recipe-box").innerHTML = recipe;
+}
+
+function clearInput(htmlElement) {
+    htmlElement.value = '';
+}
+
+function maxInput(htmlElement) {
+    let id = htmlElement.id;
+    htmlElement.value = crafting[id].max;
 }
 
 function copyMatsList() {
@@ -28,22 +37,23 @@ function toList(collection) {
         matsList += `${ collection[key] }x ${ key } \n`;
         displayList += `${ collection[key] }x ${ key } <br>`;
     }
-    document.getElementById("textbox").innerHTML = displayList;
+    document.getElementById("text-box").innerHTML = displayList;
     return matsList;
 }
 
 function calculateTotalMats(elementAmount) {
     let collection = {};
     for (let key of Object.keys(crafting)) { // key = key of crafting Object
-        for (let value of crafting[key]) { // value = value associated with key from crafting Object
+        for (let matObj of crafting[key].materials) {
             let userInput = Number(elementAmount[key]); // userInput = each value associated with the key in elementAmount
+            let matName = matObj.material;
             if (!Number.isInteger(userInput) || userInput <= 0) {
                 continue;
             }
-            if (!collection.hasOwnProperty(userInput)) {
-                collection[value.material] = 0;
+            if (!collection.hasOwnProperty(matName)) {
+                collection[matName] = 0;
             }
-            collection[value.material] += value.quantity * userInput; // multiplies each key quantity against user input
+            collection[matName] += matObj.quantity * userInput; // multiplies each key quantity against user input
         }
     }
     return collection;

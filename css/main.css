@@ -2,7 +2,7 @@
 body {
     font-family: sans-serif;
     color: white;
-    background: #2d3436;
+    background: #212121; /* before #2d3436 */
 }
 
 /* ------------------------------- */
@@ -75,7 +75,7 @@ label {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background: #34495e;
+    background: #212121;
     grid-template-columns: 325px 370px 325px;
     grid-template-rows: 620px;
     gap: 0px;
@@ -142,7 +142,7 @@ label {
 .main-text {
     width: 300px;
     height: 560px;
-    background: #34495e;
+    background: ##212121;
 }
 
 .main-text input[type = "text"] {

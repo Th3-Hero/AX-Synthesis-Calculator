@@ -36,6 +36,28 @@ const crafting = {
             { quantity: 10, material: "Focus Crystals" }
         ]
     },
+    plasma: {
+        max: 75,
+        materials:
+        [
+            { quantity: 3, material: "Chromium" },
+            { quantity: 2, material: "Heat Dispersion Plate" },
+            { quantity: 3, material: "Guardian Power Conduit" },
+            { quantity: 4, material: "Guardian Wreckage Components" }
+        ]
+    },
+    plasmaPrem: {
+        max: 33,
+        materials:
+        [
+            { quantity: 6, material: "Chromium" },
+            { quantity: 2, material: "Zirconium" },
+            { quantity: 4, material: "Heat Exchangers" },
+            { quantity: 6, material: "Phase Alloys" },
+            { quantity: 4, material: "Guardian Power Cell" },
+            { quantity: 3, material: "Guardian Sentinel Weapon Parts" }
+        ]
+    },
     shard: {
         max: 60,
         materials:

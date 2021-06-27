@@ -179,6 +179,10 @@ label {
     cursor: pointer; 
 }
 
+.calc-button:hover {
+    background: #27ae60;
+}
+
 .button-wrapper {
     text-align: center;
 }

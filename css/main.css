@@ -142,7 +142,7 @@ label {
 .main-text {
     width: 300px;
     height: 560px;
-    background: ##212121;
+    background: #212121;
 }
 
 .main-text input[type = "text"] {
@@ -177,6 +177,10 @@ label {
     font-weight: bold;
     border-radius: 34px;
     cursor: pointer; 
+}
+
+.calc-button:hover {
+    background: #27ae60;
 }
 
 .button-wrapper {
